@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CognitiveOS — An AI-native operating system</title>
+<meta name="description" content="CognitiveOS is an AI-native operating system. No apps. No browsers. No permission dialogs. Intent-centric computing.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+<h1>Cognitive<span>OS</span></h1>
+<div class="tagline">An AI-native operating system</div>
+
+<div class="section">
+  <p>Computing today is <strong>app-centric</strong>. Every task means finding, opening, and learning an app. Granting permissions. Switching between windows. Managing files. The operating system does nothing — it is a blank slate that offloads every responsibility onto the user.</p>
+  <p>CognitiveOS replaces this with <strong>intent-centric</strong> computing:</p>
+  <pre><code>1. Start the device
+2. Ask AI (speak or text)
+3. AI does something</code></pre>
+  <p>That is the complete interaction model. The human sets goals. The AI operates the machine.</p>
+</div>
+
+<div class="section">
+  <h2>Design Principles</h2>
+  <div class="principle"><strong>AI is the OS, not an app</strong> — The AI owns hardware, resources, software lifecycle, and interaction. No fallback desktop. No settings app.</div>
+  <div class="principle"><strong>One user: the AI</strong> — No user accounts, no permission groups. The AI has unfettered hardware access.</div>
+  <div class="principle"><strong>Self-managing</strong> — The AI discovers, installs, and removes its own capabilities. The human never touches a package manager.</div>
+  <div class="principle"><strong>Ephemeral interface</strong> — No windows, no home screen, no app grid. UI exists only for the duration of a task.</div>
+  <div class="principle"><strong>Universal substrate</strong> — Same architecture from a smartwatch to a server. The only difference is where the model runs.</div>
+</div>
+
+<div class="section">
+  <h2>Architecture</h2>
+  <p>Two-tier AI brain on Alpine Linux, controlled via Bubble Tea TUI, talking to hardware through MCP bridges:</p>
+  <pre><code>┌─────────────────────────────────────────────────────┐
+│                    User (Human)                      │
+├─────────────────────────────────────────────────────┤
+│                    Bubble Tea TUI (cli)              │
+├─────────────────────────────────────────────────────┤
+│         cognitiveosd (daemon — message bus)          │
+├──────────────────┬──────────────────────────────────┤
+│   Raw Model      │    Wide Model (inference)         │
+│   (local, MCU)   │    (local or remote .gguf)       │
+├──────────────────┴──────────────────────────────────┤
+│  MCP Bridges: display, audio, network, gpio, serial  │
+├─────────────────────────────────────────────────────┤
+│              Alpine Linux + /dev/fb0                 │
+└─────────────────────────────────────────────────────┘</code></pre>
+</div>
+
+<div class="section">
+  <h2>Repositories</h2>
+  <table class="repo-table">
+    <tr><th>Name</th><th>Role</th><th>Language</th></tr>
+    <tr><td><a href="https://github.com/CognitiveOS-Project/product-specs">product-specs</a></td><td>Standards, schemas, .cgp format</td><td>Markdown/JSON</td></tr>
+    <tr><td><a href="https://github.com/CognitiveOS-Project/sdlc">sdlc</a></td><td>Implementation plan, workflow, CI/CD</td><td>Markdown</td></tr>
+    <tr><td><a href="https://github.com/CognitiveOS-Project/cpm">cpm</a></td><td>Cognitive Package Manager</td><td>Go</td></tr>
+    <tr><td><a href="https://github.com/CognitiveOS-Project/core-mcp-bridges">core-mcp-bridges</a></td><td>MCP hardware tool servers</td><td>Go</td></tr>
+    <tr><td><a href="https://github.com/CognitiveOS-Project/inference">inference</a></td><td>LLM inference engine</td><td>Go/C</td></tr>
+    <tr><td><a href="https://github.com/CognitiveOS-Project/cognitiveosd">cognitiveosd</a></td><td>System daemon</td><td>Go</td></tr>
+    <tr><td><a href="https://github.com/CognitiveOS-Project/cli">cli</a></td><td>Bubble Tea TUI frontend</td><td>Go</td></tr>
+    <tr><td><a href="https://github.com/CognitiveOS-Project/cognitiveos-distro">cognitiveos-distro</a></td><td>Alpine image builder</td><td>Shell/Docker</td></tr>
+    <tr><td><a href="https://github.com/CognitiveOS-Project/cgp-template">cgp-template</a></td><td>.cgp boilerplate</td><td>Template</td></tr>
+    <tr><td><a href="https://github.com/CognitiveOS-Project/registry-server">registry-server</a></td><td>Package registry</td><td>Go</td></tr>
+  </table>
+</div>
+
+<div class="section">
+  <h2>Status</h2>
+  <p>Active development. Specs are complete. Phase 1 (package manager) is the current focus. See the <a href="https://github.com/CognitiveOS-Project/sdlc">sdlc</a> repo for the full implementation plan.</p>
+</div>
+
+<div class="footer">
+  <span class="prompt">CognitiveOS-Project</span> &mdash; MIT licensed &middot;
+  <a href="https://github.com/CognitiveOS-Project">GitHub Organization</a> &middot;
+  <a href="https://github.com/CognitiveOS-Project/cognitive-os.org">Edit this page</a>
+</div>
+
+</div>
+</body>
+</html>
