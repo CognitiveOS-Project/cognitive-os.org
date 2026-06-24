@@ -3,3 +3,6 @@
 *.swp
 *.swo
 .env
+
+# Editor backups
+* 2.*
