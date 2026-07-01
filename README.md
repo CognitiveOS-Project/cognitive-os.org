@@ -1,5 +1,21 @@
 # cognitive-os.org
-CognitiveOS project website — cognitive-os.org
+
+CognitiveOS project website + documentation — [cognitive-os.org](https://cognitive-os.org)
+
+## Tech Stack
+
+- **[Docusaurus](https://docusaurus.io/)** — React-based static site generator
+- Landing page with refined terminal aesthetic
+- Markdown documentation at `/docs/`
+- Hosted on **GitHub Pages** with custom domain
+
+## Development
+
+```bash
+npm ci
+npm run start    # local dev server with hot reload
+npm run build    # production build → build/
+```
 
 ## Contributing
 

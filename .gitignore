@@ -1,8 +1,8 @@
-# No build artifacts — plain static site
 .DS_Store
 *.swp
 *.swo
 .env
-
-# Editor backups
-* 2.*
+node_modules/
+build/
+.docusaurus/
+.cache/

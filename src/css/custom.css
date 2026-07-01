@@ -1,0 +1,194 @@
+:root {
+  --ifm-color-primary: #58a6ff;
+  --ifm-color-primary-dark: #3d93ff;
+  --ifm-color-primary-darker: #2d8aff;
+  --ifm-color-primary-darkest: #006ee6;
+  --ifm-color-primary-light: #73b4ff;
+  --ifm-color-primary-lighter: #83bdff;
+  --ifm-color-primary-lightest: #aed4ff;
+  --ifm-code-font-size: 90%;
+  --ifm-font-family-base: "SF Mono", "Fira Code", "Cascadia Code", "JetBrains Mono", "DejaVu Sans Mono", monospace;
+  --ifm-font-family-monospace: "SF Mono", "Fira Code", "Cascadia Code", "JetBrains Mono", "DejaVu Sans Mono", monospace;
+  --ifm-heading-font-family: "SF Mono", "Fira Code", "Cascadia Code", "JetBrains Mono", "DejaVu Sans Mono", monospace;
+  --ifm-navbar-background-color: #0d1117;
+  --ifm-background-color: #0d1117;
+  --ifm-background-surface-color: #161b22;
+  --ifm-footer-background-color: #0d1117;
+  --ifm-toc-border-color: #21262d;
+  --ifm-hover-overlay: rgba(88, 166, 255, 0.05);
+  --docusaurus-highlighted-code-line-bg: rgba(88, 166, 255, 0.1);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #58a6ff;
+  --ifm-color-primary-dark: #3d93ff;
+  --ifm-color-primary-darker: #2d8aff;
+  --ifm-color-primary-darkest: #006ee6;
+  --ifm-color-primary-light: #73b4ff;
+  --ifm-color-primary-lighter: #83bdff;
+  --ifm-color-primary-lightest: #aed4ff;
+  --ifm-background-color: #0d1117;
+  --ifm-background-surface-color: #161b22;
+  --ifm-navbar-background-color: #0d1117;
+  --ifm-footer-background-color: #0d1117;
+  --ifm-toc-border-color: #21262d;
+  --docusaurus-highlighted-code-line-bg: rgba(88, 166, 255, 0.1);
+}
+
+body {
+  background: #0d1117;
+  color: #c9d1d9;
+  font-family: "SF Mono", "Fira Code", "Cascadia Code", "JetBrains Mono", "DejaVu Sans Mono", monospace;
+}
+
+.navbar {
+  border-bottom: 1px solid #21262d;
+  box-shadow: none;
+}
+
+.navbar__link:hover {
+  color: #58a6ff;
+}
+
+.navbar__brand:hover {
+  color: #58a6ff;
+}
+
+.footer {
+  border-top: 1px solid #21262d;
+}
+
+a {
+  color: #58a6ff;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+a:hover {
+  color: #79c0ff;
+  text-decoration: underline;
+}
+
+code {
+  background: #161b22;
+  border: 1px solid #21262d;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  color: #f0f6fc;
+}
+
+pre {
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 6px;
+}
+
+.theme-doc-sidebar-menu {
+  font-size: 0.9rem;
+}
+
+.menu__link--active {
+  color: #58a6ff;
+  font-weight: 600;
+}
+
+.pagination-nav__link {
+  border-color: #21262d;
+}
+
+.pagination-nav__link:hover {
+  border-color: #58a6ff;
+}
+
+.hero-bracket {
+  color: #8b949e;
+  font-weight: 300;
+}
+
+.hero-prompt {
+  color: #3fb950;
+  font-weight: 600;
+}
+
+.hero-prompt::before {
+  content: "$ ";
+  color: #8b949e;
+}
+
+.download-card {
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  transition: border-color 0.2s;
+}
+
+.download-card:hover {
+  border-color: #58a6ff;
+}
+
+.download-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.download-card .button {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background: #21262d;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #c9d1d9;
+  font-family: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  margin-top: 0.5rem;
+}
+
+.download-card .button:hover {
+  background: #30363d;
+  border-color: #58a6ff;
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+.principle-block {
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+  border-left: 2px solid #21262d;
+  transition: border-color 0.15s;
+}
+
+.principle-block:hover {
+  border-left-color: #58a6ff;
+}
+
+.principle-block strong {
+  color: #f0f6fc;
+}
+
+.repo-row td {
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid #161b22;
+  transition: background 0.1s;
+}
+
+.repo-row:hover td {
+  background: #161b22;
+}
+
+.repo-row td:first-child {
+  color: #58a6ff;
+  font-weight: 500;
+}
+
+.repo-row td:nth-child(2) {
+  color: #f0f6fc;
+}
+
+.repo-row td:nth-child(3) {
+  color: #8b949e;
+  font-size: 0.9rem;
+}
