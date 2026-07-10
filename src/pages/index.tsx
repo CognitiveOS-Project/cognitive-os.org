@@ -153,47 +153,48 @@ export default function Home(): ReactNode {
 └─────────────────────────────────────────────────────┘`}</pre>
         </Section>
 
-        <Section title="Download">
-          <div className="download-card">
-            <h3>Bootable Images</h3>
-            <p style={{color: '#8b949e', fontSize: '0.9rem', marginBottom: '1rem'}}>
-              Pre-built images for x86_64 and Raspberry Pi, plus distro tarballs for custom builds.
-            </p>
-            <a
-              href="https://github.com/CognitiveOS-Project/cognitiveos-distro/releases/latest"
-              className="button"
-              style={{
-                display: 'inline-block',
-                padding: '0.5rem 1.2rem',
-                background: '#21262d',
-                border: '1px solid #30363d',
-                borderRadius: 6,
-                color: '#c9d1d9',
-                fontFamily: 'inherit',
-                fontSize: '0.85rem',
-                cursor: 'pointer',
-                transition: 'all 0.15s',
-                marginRight: '0.75rem',
-                marginBottom: '0.5rem',
-                textDecoration: 'none',
-              }}>
-              Download Latest Release →
-            </a>
-            <code style={{fontSize: '0.8rem', color: '#8b949e'}}>
-              wget https://github.com/CognitiveOS-Project/cognitiveos-distro/releases/latest
-            </code>
-          </div>
+         <Section title="Download">
+           <div className="download-card">
+             <h3>Distro Images</h3>
+             <p style={{color: '#8b949e', fontSize: '0.9rem', marginBottom: '1rem'}}>
+               Hardware-optimized images for 6 variants: Standard, Titan, Edge, Gateway, and Micro (across x86_64, aarch64, and armv7).
+             </p>
+             <a
+               href="https://github.com/CognitiveOS-Project/cognitiveos-distro/releases"
+               className="button"
+               style={{
+                 display: 'inline-block',
+                 padding: '0.5rem 1.2rem',
+                 background: '#21262d',
+                 border: '1px solid #30363d',
+                 borderRadius: 6,
+                 color: '#c9d1d9',
+                 fontFamily: 'inherit',
+                 fontSize: '0.85rem',
+                 cursor: 'pointer',
+                 transition: 'all 0.15s',
+                 marginRight: '0.75rem',
+                 marginBottom: '0.5rem',
+                 textDecoration: 'none',
+               }}>
+               Browse All Releases →
+             </a>
+             <code style={{fontSize: '0.8rem', color: '#8b949e'}}>
+               cognitiveos-v0.4.0-standard-x86_64.iso
+             </code>
+           </div>
+ 
+           <div className="download-card">
+             <h3>Docker Image</h3>
+             <p style={{color: '#8b949e', fontSize: '0.9rem', marginBottom: '1rem'}}>
+               Runtime image for using CognitiveOS components inside a container.
+             </p>
+             <code style={{fontSize: '0.85rem', background: '#0d1117'}}>
+               docker pull ghcr.io/CognitiveOS-Project/cognitiveos-distro:v0.4.0-standard-x86_64
+             </code>
+           </div>
+         </Section>
 
-          <div className="download-card">
-            <h3>Docker Image</h3>
-            <p style={{color: '#8b949e', fontSize: '0.9rem', marginBottom: '1rem'}}>
-              Runtime image for using CognitiveOS components inside a container.
-            </p>
-            <code style={{fontSize: '0.85rem', background: '#0d1117'}}>
-              docker pull ghcr.io/CognitiveOS-Project/cognitiveos-distro:latest
-            </code>
-          </div>
-        </Section>
 
         <Section title="Repositories">
           <table style={{

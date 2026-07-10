@@ -5,58 +5,66 @@ sidebar_position: 2
 # Installation
 
 ## Prerequisites
-
-- A 64-bit x86 machine or Raspberry Pi (3B+ or newer)
+ 
+- A 64-bit x86 machine, Raspberry Pi 4/5 (aarch64), or Raspberry Pi 3 (armv7)
 - 2GB+ RAM (4GB recommended)
-- A USB drive (8GB+) for bootable media
-
+- A USB drive or SD card (8GB+) for bootable media
+ 
 ## Download
-
-Pre-built bootable images are available on the [releases page](https://github.com/CognitiveOS-Project/cognitiveos-distro/releases/latest):
-
-| Image | Platform |
-|-------|----------|
-| `cognitiveos-<version>-x86_64.iso` | x86_64 desktop/laptop |
-| `cognitiveos-<version>-aarch64.img` | Raspberry Pi (SD card) |
-| `cognitiveos-distro-<version>-<arch>.tar.gz` | Distro tarball for custom builds |
-
-## Writing to USB (x86_64)
-
+ 
+Pre-built bootable images are available on the [releases page](https://github.com/CognitiveOS-Project/cognitiveos-distro/releases):
+ 
+| Image Variant | Platform | Best For |
+|---------------|----------|----------|
+| `standard-x86_64` | x86_64 | General purpose desktop/laptop |
+| `gateway-x86_64` | x86_64 | Low-power x86 gateway nodes |
+| `titan-aarch64` | aarch64 | High-performance ARM (RPi 4/5, etc.) |
+| `edge-aarch64` | aarch64 | Power-efficient ARM edge devices |
+| `edge-armv7` | armv7 | Legacy ARM hardware (RPi 3) |
+| `micro-armv7` | armv7 | Extremely constrained embedded ARM |
+| `distro-tarball` | All | Custom builds and portable installation |
+ 
+## Writing to Media
+ 
+### x86_64 (USB Drive)
+ 
 ```bash
-# Download the ISO
-wget https://github.com/CognitiveOS-Project/cognitiveos-distro/releases/latest/download/cognitiveos-<version>-x86_64.iso
-
-# Verify checksum (recommended)
-sha256sum cognitiveos-<version>-x86_64.iso
-
+# Download the ISO (replace <version> with latest release)
+wget https://github.com/CognitiveOS-Project/cognitiveos-distro/releases/download/<version>/cognitiveos-<version>-standard-x86_64.iso
+ 
+# Verify checksum
+sha256sum cognitiveos-<version>-standard-x86_64.iso
+ 
 # Write to USB (replace /dev/sdX with your USB device)
-sudo dd if=cognitiveos-<version>-x86_64.iso of=/dev/sdX bs=4M status=progress
+sudo dd if=cognitiveos-<version>-standard-x86_64.iso of=/dev/sdX bs=4M status=progress
 sync
 ```
-
-## Writing to SD Card (Raspberry Pi)
-
+ 
+### ARM (SD Card)
+ 
 ```bash
-# Download the image
-wget https://github.com/CognitiveOS-Project/cognitiveos-distro/releases/latest/download/cognitiveos-<version>-aarch64.img
-
+# Download the image (replace <version> and <variant> with your choice)
+wget https://github.com/CognitiveOS-Project/cognitiveos-distro/releases/download/<version>/cognitiveos-<version>-<variant>.img
+ 
 # Write to SD card (replace /dev/mmcblk0 with your SD card)
-sudo dd if=cognitiveos-<version>-aarch64.img of=/dev/mmcblk0 bs=4M status=progress
+sudo dd if=cognitiveos-<version>-<variant>.img of=/dev/mmcblk0 bs=4M status=progress
 sync
 ```
-
+ 
 ## Booting
-
+ 
 Insert the USB drive or SD card and boot from it. On first boot, CognitiveOS will initialize the AI environment and present a terminal prompt.
-
+ 
 ## Docker
-
-If you just want to explore the runtime:
-
+ 
+If you just want to explore the runtime, pull a specific variant image:
+ 
 ```bash
-docker pull ghcr.io/CognitiveOS-Project/cognitiveos-distro:latest
-docker run -it ghcr.io/CognitiveOS-Project/cognitiveos-distro:latest
+# Example: Pull the standard x86_64 image for v0.4.0
+docker pull ghcr.io/CognitiveOS-Project/cognitiveos-distro:v0.4.0-standard-x86_64
+docker run -it ghcr.io/CognitiveOS-Project/cognitiveos-distro:v0.4.0-standard-x86_64
 ```
+
 
 ## Building from Source
 
