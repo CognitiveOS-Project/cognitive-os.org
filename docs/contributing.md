@@ -33,7 +33,7 @@ All repositories follow topic-branch workflow:
 | [inference](https://github.com/CognitiveOS-Project/inference) | Model runner, CGo bindings |
 | [cognitiveosd](https://github.com/CognitiveOS-Project/cognitiveosd) | Daemon, message bus |
 | [cli](https://github.com/CognitiveOS-Project/cli) | TUI, user interface |
-| [cognitiveos-distro](https://github.com/CognitiveOS-Project/cognitiveos-distro) | Image builder, Docker |
+| [cognitiveos-alpine-distro](https://github.com/CognitiveOS-Project/cognitiveos-alpine-distro) | Image builder, Docker |
 | [registry-server](https://github.com/CognitiveOS-Project/registry-server) | Package registry server |
 
 ## Building from Source
@@ -41,8 +41,8 @@ All repositories follow topic-branch workflow:
 Clone the repositories and follow the build instructions in each repo's README. For the distro image specifically:
 
 ```bash
-git clone https://github.com/CognitiveOS-Project/cognitiveos-distro.git
-cd cognitiveos-distro
+git clone https://github.com/CognitiveOS-Project/cognitiveos-alpine-distro.git
+cd cognitiveos-alpine-distro
 make iso        # Build x86_64 ISO
 make rpi        # Build Raspberry Pi image
 ```

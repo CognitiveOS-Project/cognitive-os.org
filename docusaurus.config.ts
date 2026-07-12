@@ -59,7 +59,7 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          href: 'https://github.com/CognitiveOS-Project/cognitiveos-distro/releases/latest',
+          href: 'https://github.com/CognitiveOS-Project/cognitiveos-alpine-distro/releases/latest',
           label: 'Download',
           position: 'left',
         },
@@ -93,7 +93,7 @@ const config: Config = {
           title: 'Repositories',
           items: [
             {label: 'cognitiveos', href: 'https://github.com/CognitiveOS-Project/cognitiveos'},
-            {label: 'cognitiveos-distro', href: 'https://github.com/CognitiveOS-Project/cognitiveos-distro'},
+            {label: 'cognitiveos-alpine-distro', href: 'https://github.com/CognitiveOS-Project/cognitiveos-alpine-distro'},
             {label: 'SDLC', href: 'https://github.com/CognitiveOS-Project/sdlc'},
             {label: 'product-specs', href: 'https://github.com/CognitiveOS-Project/product-specs'},
           ],

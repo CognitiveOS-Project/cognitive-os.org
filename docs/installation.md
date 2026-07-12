@@ -12,7 +12,7 @@ sidebar_position: 2
  
 ## Download
  
-Pre-built bootable images are available on the [releases page](https://github.com/CognitiveOS-Project/cognitiveos-distro/releases):
+Pre-built bootable images are available on the [releases page](https://github.com/CognitiveOS-Project/cognitiveos-alpine-distro/releases):
  
 | Image Variant | Platform | Best For |
 |---------------|----------|----------|
@@ -30,7 +30,7 @@ Pre-built bootable images are available on the [releases page](https://github.co
  
 ```bash
 # Download the ISO (replace <version> with latest release)
-wget https://github.com/CognitiveOS-Project/cognitiveos-distro/releases/download/<version>/cognitiveos-<version>-standard-x86_64.iso
+wget https://github.com/CognitiveOS-Project/cognitiveos-alpine-distro/releases/download/<version>/cognitiveos-<version>-standard-x86_64.iso
  
 # Verify checksum
 sha256sum cognitiveos-<version>-standard-x86_64.iso
@@ -44,7 +44,7 @@ sync
  
 ```bash
 # Download the image (replace <version> and <variant> with your choice)
-wget https://github.com/CognitiveOS-Project/cognitiveos-distro/releases/download/<version>/cognitiveos-<version>-<variant>.img
+wget https://github.com/CognitiveOS-Project/cognitiveos-alpine-distro/releases/download/<version>/cognitiveos-<version>-<variant>.img
  
 # Write to SD card (replace /dev/mmcblk0 with your SD card)
 sudo dd if=cognitiveos-<version>-<variant>.img of=/dev/mmcblk0 bs=4M status=progress
@@ -61,8 +61,8 @@ If you just want to explore the runtime, pull a specific variant image:
  
 ```bash
 # Example: Pull the standard x86_64 image for v0.4.0
-docker pull ghcr.io/CognitiveOS-Project/cognitiveos-distro:v0.4.0-standard-x86_64
-docker run -it ghcr.io/CognitiveOS-Project/cognitiveos-distro:v0.4.0-standard-x86_64
+docker pull ghcr.io/CognitiveOS-Project/cognitiveos-alpine-distro:v0.4.0-standard-x86_64
+docker run -it ghcr.io/CognitiveOS-Project/cognitiveos-alpine-distro:v0.4.0-standard-x86_64
 ```
 
 

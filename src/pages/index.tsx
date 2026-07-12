@@ -12,7 +12,7 @@ const repos = [
   {name: 'inference', role: 'Model runner (CGo bindings)', lang: 'Go/C'},
   {name: 'cognitiveosd', role: 'System daemon (message bus)', lang: 'Go'},
   {name: 'cli', role: 'Bubble Tea TUI frontend', lang: 'Go'},
-  {name: 'cognitiveos-distro', role: 'Alpine image builder', lang: 'Shell/Docker'},
+  {name: 'cognitiveos-alpine-distro', role: 'Alpine image builder', lang: 'Shell/Docker'},
   {name: 'cgp-template', role: '.cgp boilerplate', lang: 'Template'},
   {name: 'registry-server', role: 'Package registry', lang: 'Go'},
 ];
@@ -160,7 +160,7 @@ export default function Home(): ReactNode {
                Hardware-optimized images for 6 variants: Standard, Titan, Edge, Gateway, and Micro (across x86_64, aarch64, and armv7).
              </p>
              <a
-               href="https://github.com/CognitiveOS-Project/cognitiveos-distro/releases"
+               href="https://github.com/CognitiveOS-Project/cognitiveos-alpine-distro/releases"
                className="button"
                style={{
                  display: 'inline-block',
@@ -190,7 +190,7 @@ export default function Home(): ReactNode {
                Runtime image for using CognitiveOS components inside a container.
              </p>
              <code style={{fontSize: '0.85rem', background: '#0d1117'}}>
-               docker pull ghcr.io/CognitiveOS-Project/cognitiveos-distro:v0.4.0-standard-x86_64
+               docker pull ghcr.io/CognitiveOS-Project/cognitiveos-alpine-distro:v0.4.0-standard-x86_64
              </code>
            </div>
          </Section>
