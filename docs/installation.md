@@ -60,9 +60,9 @@ Insert the USB drive or SD card and boot from it. On first boot, CognitiveOS wil
 If you just want to explore the runtime, pull a specific variant image:
  
 ```bash
-# Example: Pull the standard x86_64 image for v0.4.0
-docker pull ghcr.io/CognitiveOS-Project/cognitiveos-alpine-distro:v0.4.0-standard-x86_64
-docker run -it ghcr.io/CognitiveOS-Project/cognitiveos-alpine-distro:v0.4.0-standard-x86_64
+# Example: Pull the standard x86_64 image
+docker pull ghcr.io/cognitiveos-project/cognitiveos:<version>-standard-x86_64
+docker run -it ghcr.io/cognitiveos-project/cognitiveos:<version>-standard-x86_64
 ```
 
 

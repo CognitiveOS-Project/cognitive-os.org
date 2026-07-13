@@ -179,9 +179,9 @@ export default function Home(): ReactNode {
                }}>
                Browse All Releases →
              </a>
-             <code style={{fontSize: '0.8rem', color: '#8b949e'}}>
-               cognitiveos-v0.4.0-standard-x86_64.iso
-             </code>
+              <code style={{fontSize: '0.8rem', color: '#8b949e'}}>
+                cognitiveos-&lt;version&gt;-standard-x86_64.iso
+              </code>
            </div>
  
            <div className="download-card">
@@ -189,9 +189,9 @@ export default function Home(): ReactNode {
              <p style={{color: '#8b949e', fontSize: '0.9rem', marginBottom: '1rem'}}>
                Runtime image for using CognitiveOS components inside a container.
              </p>
-             <code style={{fontSize: '0.85rem', background: '#0d1117'}}>
-               docker pull ghcr.io/CognitiveOS-Project/cognitiveos-alpine-distro:v0.4.0-standard-x86_64
-             </code>
+              <code style={{fontSize: '0.85rem', background: '#0d1117'}}>
+                docker pull ghcr.io/cognitiveos-project/cognitiveos:&lt;version&gt;-standard-x86_64
+              </code>
            </div>
          </Section>
 
