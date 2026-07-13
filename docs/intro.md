@@ -2,7 +2,6 @@
 title: "What is CognitiveOS?"
 description: "CognitiveOS is an AI-native operating system with intent-centric computing. No apps, no desktop — the AI operates the machine directly."
 sidebar_position: 1
-slug: /
 keywords: [CognitiveOS, AI operating system, intent-centric computing, AI-native OS]
 ---
 
