@@ -82,10 +82,64 @@ function Section({title, children}: {title?: string; children: ReactNode}) {
 }
 
 export default function Home(): ReactNode {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareSourceCode',
+    name: 'CognitiveOS',
+    description: 'An AI-native operating system with intent-centric computing. No apps, no browsers — the AI operates the machine directly.',
+    url: 'https://cognitive-os.org',
+    applicationCategory: 'OperatingSystem',
+    operatingSystem: 'Alpine Linux',
+    license: 'https://opensource.org/licenses/MIT',
+    codeRepository: 'https://github.com/CognitiveOS-Project',
+    programmingLanguage: ['Go', 'Shell', 'C'],
+  };
+
+  const faqData = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is CognitiveOS?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'CognitiveOS is an AI-native operating system where artificial intelligence is the foundation, not an application. It replaces app-centric computing with intent-centric computing — you state goals, and the AI operates the machine directly.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How do I install CognitiveOS?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Download a bootable image from the GitHub releases page, write it to a USB drive or SD card using dd, and boot. CognitiveOS supports x86_64, aarch64 (Raspberry Pi 4/5), and armv7 (Raspberry Pi 3) platforms.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What hardware does CognitiveOS support?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'CognitiveOS supports five hardware classes: Titan (16GB+ ARM64 servers), Standard (8GB+ x86 desktops/laptops), Gateway (4GB+ x86 headless), Edge (2GB+ ARM64/ARMv7 Raspberry Pi), and Micro (512MB+ ARMv7 Raspberry Pi Zero).',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the Cognitive Package Manager (cpm)?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'cpm is the CognitiveOS package manager that installs, removes, and manages .cgp cognitive patches. It handles dependency resolution, hardware compatibility checks, and system-level package installation.',
+        },
+      },
+    ],
+  };
+
   return (
     <Layout
       title="CognitiveOS"
       description="CognitiveOS is an AI-native operating system. No apps. No browsers. No permission dialogs. Intent-centric computing.">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(structuredData)}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(faqData)}} />
       <main style={{maxWidth: 820, margin: '0 auto', padding: '0 1.5rem 3rem'}}>
         <Hero />
 

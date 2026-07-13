@@ -1,5 +1,8 @@
 ---
+title: "Installation"
+description: "Install CognitiveOS on x86_64, Raspberry Pi (aarch64), or ARM devices. Download bootable images, write to USB/SD card, and boot."
 sidebar_position: 2
+keywords: [CognitiveOS install, bootable image, Raspberry Pi, Docker, Alpine Linux]
 ---
 
 # Installation

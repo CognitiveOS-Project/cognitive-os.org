@@ -35,12 +35,29 @@ const config: Config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        sitemap: {
+          lastmod: 'datetime',
+          changefreq: 'weekly',
+          priority: 0.8,
+        },
       } satisfies Preset.Options,
     ],
   ],
 
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
+    metadata: [
+      {name: 'keywords', content: 'CognitiveOS, AI operating system, intent-centric computing, AI-native OS, Alpine Linux, MCP'},
+      {name: 'author', content: 'CognitiveOS-Project'},
+      {property: 'og:site_name', content: 'CognitiveOS'},
+      {property: 'og:locale', content: 'en_US'},
+    ],
+    twitter: {
+      card: 'summary_large_image',
+      title: 'CognitiveOS — An AI-Native Operating System',
+      description: 'No apps. No browsers. No permission dialogs. Intent-centric computing where the AI operates the machine.',
+      image: 'img/docusaurus-social-card.jpg',
+    },
     colorMode: {
       defaultMode: 'dark',
       respectPrefersColorScheme: true,

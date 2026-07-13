@@ -1,5 +1,8 @@
 ---
+title: "Contributing"
+description: "Contribute to CognitiveOS — open source (MIT), 10+ repositories, Go and C++ codebase."
 sidebar_position: 4
+keywords: [CognitiveOS contributing, open source, MIT license, Go, C++]
 ---
 
 # Contributing

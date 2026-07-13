@@ -1,5 +1,8 @@
 ---
+title: "Architecture Overview"
+description: "CognitiveOS system architecture — Alpine Linux base, MCP bridges, inference engine, daemon, and CLI layers."
 sidebar_position: 3
+keywords: [CognitiveOS architecture, MCP bridges, inference engine, cognitiveosd, system design]
 ---
 
 # Architecture Overview
