@@ -73,5 +73,6 @@ Hardware is accessed through **MCP (Model Context Protocol) bridges** — Go pro
 | [inference](https://github.com/CognitiveOS-Project/inference) | Model runner |
 | [cognitiveosd](https://github.com/CognitiveOS-Project/cognitiveosd) | System daemon |
 | [cli](https://github.com/CognitiveOS-Project/cli) | TUI frontend |
+| [coginit](https://github.com/CognitiveOS-Project/coginit) | Boot manager |
 | [cognitiveos-alpine-distro](https://github.com/CognitiveOS-Project/cognitiveos-alpine-distro) | Alpine image builder |
 | [registry-server](https://github.com/CognitiveOS-Project/registry-server) | Package registry |

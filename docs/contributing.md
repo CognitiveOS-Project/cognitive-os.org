@@ -36,6 +36,7 @@ All repositories follow topic-branch workflow:
 | [inference](https://github.com/CognitiveOS-Project/inference) | Model runner, CGo bindings |
 | [cognitiveosd](https://github.com/CognitiveOS-Project/cognitiveosd) | Daemon, message bus |
 | [cli](https://github.com/CognitiveOS-Project/cli) | TUI, user interface |
+| [coginit](https://github.com/CognitiveOS-Project/coginit) | Boot manager, init, backdoor shell |
 | [cognitiveos-alpine-distro](https://github.com/CognitiveOS-Project/cognitiveos-alpine-distro) | Image builder, Docker |
 | [registry-server](https://github.com/CognitiveOS-Project/registry-server) | Package registry server |
 
