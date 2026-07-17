@@ -37,7 +37,7 @@ CognitiveOS runs on Alpine Linux with a two-tier AI brain:
 
 | Layer | Component | Role |
 |-------|-----------|------|
-| User | Bubble Tea TUI (cli) | Text-based interface |
+| User | Terminal User Interface (cli) | Text-based interface |
 | Message bus | cognitiveosd | System daemon, manages communication |
 | Raw model | inference (local, MCU) | Fast, low-power inference |
 | Wide model | inference (local/remote .gguf) | Full-capability model |

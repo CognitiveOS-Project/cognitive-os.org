@@ -15,7 +15,7 @@ CognitiveOS runs on **Alpine Linux**, chosen for its small footprint, security, 
 ┌─────────────────────────────────────────────────────┐
 │                    User (Human)                      │
 ├─────────────────────────────────────────────────────┤
-│                    Bubble Tea TUI (cli)              │
+│               Terminal User Interface TUI (cli)           │
 ├─────────────────────────────────────────────────────┤
 │         cognitiveosd (daemon — message bus)          │
 ├──────────────────┬──────────────────────────────────┤
@@ -32,7 +32,7 @@ CognitiveOS runs on **Alpine Linux**, chosen for its small footprint, security, 
 
 ### User Interface (cli)
 
-The primary interface is a **Bubble Tea TUI** — a terminal-based UI built with Go. No desktop environment, no window manager. The TUI renders ephemeral interfaces for each task and disappears when the task completes.
+The primary interface is a **terminal user interface (TUI)** — a terminal-based UI built with Go. No desktop environment, no window manager. The TUI renders ephemeral interfaces for each task and disappears when the task completes.
 
 ### Message Bus (cognitiveosd)
 

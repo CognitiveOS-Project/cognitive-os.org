@@ -11,7 +11,7 @@ const repos = [
   {name: 'core-mcp-bridges', role: 'Hardware bridge interfaces', lang: 'Go'},
   {name: 'inference', role: 'Model runner (CGo bindings)', lang: 'Go/C'},
   {name: 'cognitiveosd', role: 'System daemon (message bus)', lang: 'Go'},
-  {name: 'cli', role: 'Bubble Tea TUI frontend', lang: 'Go'},
+  {name: 'cli', role: 'Terminal User Interface (TUI)', lang: 'Go'},
   {name: 'cognitiveos-alpine-distro', role: 'Alpine image builder', lang: 'Shell/Docker'},
   {name: 'cgp-template', role: '.cgp boilerplate', lang: 'Template'},
   {name: 'registry-server', role: 'Package registry', lang: 'Go'},
@@ -178,7 +178,7 @@ export default function Home(): ReactNode {
 
         <Section title="Architecture">
           <p style={{color: '#c9d1d9', marginBottom: '0.8rem'}}>
-            Two-tier AI brain on Alpine Linux, controlled via Bubble Tea TUI talking to hardware through MCP bridges:
+            Two-tier AI brain on Alpine Linux, controlled via terminal user interface (TUI) talking to hardware through MCP bridges:
           </p>
           <pre style={{
             background: '#161b22',
@@ -194,7 +194,7 @@ export default function Home(): ReactNode {
           }}>{`┌─────────────────────────────────────────────────────┐
 │                    User (Human)                      │
 ├─────────────────────────────────────────────────────┤
-│                    Bubble Tea TUI (cli)              │
+│               Terminal User Interface TUI (cli)           │
 ├─────────────────────────────────────────────────────┤
 │         cognitiveosd (daemon — message bus)          │
 ├──────────────────┬──────────────────────────────────┤
