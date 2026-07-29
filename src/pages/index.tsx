@@ -11,6 +11,7 @@ const repos = [
   {name: 'core-mcp-bridges', role: 'Hardware bridge interfaces', lang: 'Go'},
   {name: 'inference', role: 'Model runner (CGo bindings)', lang: 'Go/C'},
   {name: 'cognitiveosd', role: 'System daemon (message bus)', lang: 'Go'},
+  {name: 'coginit', role: 'Boot manager, init, backdoor shell', lang: 'Go'},
   {name: 'cli', role: 'Terminal User Interface (TUI)', lang: 'Go'},
   {name: 'cognitiveos-alpine-distro', role: 'Alpine image builder', lang: 'Shell/Docker'},
   {name: 'cgp-template', role: '.cgp boilerplate', lang: 'Template'},
