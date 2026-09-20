@@ -2,7 +2,11 @@
 *.swp
 *.swo
 .env
-node_modules/
+node_modules
+node_modules.nosync/
 build/
 .docusaurus/
 .cache/
+
+# macOS AppleDouble / Finder metadata
+._*
