@@ -1,0 +1,35 @@
+name: CI - Link Check & HTML Validation
+
+on:
+  pull_request:
+    branches: [development]
+  push:
+    branches: [development, main]
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build website
+        run: npm run build
+
+      - name: Link check
+        run: |
+          npx markdown-link-check@3.11.3 'build/**/*.html' || true
+          npx markdown-link-check@3.11.3 'docs/**/*.md' || true
+
+      - name: HTML validation
+        run: |
+          npx html-validate@8.21.0 'build/**/*.html' || true
