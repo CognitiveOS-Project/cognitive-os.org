@@ -21,3 +21,12 @@ Push `main` — GitHub Pages auto-deploys via `.github/workflows/pages.yml`.
 ## Git workflow
 
 Follow root workspace conventions: topic branches from `development`, PR to `development`, then merge to `main` on release.
+
+## Process Enforcements (MANDATORY)
+
+All work in this repo MUST follow the CognitiveOS Process Enforcements:
+
+- `product-specs/docs/ENFORCEMENTS.md` — SPECv1, GHW, VibeLeading, ABSEv1
+- `sdlc/docs/ENFORCEMENTS.md` — same content (mirror)
+
+These enforcements are binding on every contributor, agent, and automation. No work may bypass them except on explicit user instruction (maintainer emergency).
