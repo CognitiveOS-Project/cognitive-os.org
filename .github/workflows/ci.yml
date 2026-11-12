@@ -27,9 +27,13 @@ jobs:
 
       - name: Link check
         run: |
-          npx markdown-link-check@3.11.3 'build/**/*.html' || true
-          npx markdown-link-check@3.11.3 'docs/**/*.md' || true
+          npx markdown-link-check@3.11.3 'build/**/*.html'
+          npx markdown-link-check@3.11.3 'docs/**/*.md'
 
       - name: HTML validation
         run: |
-          npx html-validate@8.21.0 'build/**/*.html' || true
+          npx html-validate@8.21.0 'build/**/*.html'
+
+      - name: CSS validation
+        run: |
+          npx stylelint@16.10.0 '**/*.css' || true
